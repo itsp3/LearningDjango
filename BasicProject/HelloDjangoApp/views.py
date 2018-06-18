@@ -10,9 +10,19 @@ def index(request):
         request,
         "HelloDjangoApp/index.html",  # Relative path from the 'templates' folder to the template file
         {
-            'title' : "Hello Django",
-            'message' : "Hello Django!",
+            'title' : "Intercast Portal",
+            'message' : "Intercast Portal",
             'content' : " on " + now.strftime("%A, %d %B, %Y at %X")
+        }
+    )
+
+def about(request):
+    return render(
+        request,
+        "HelloDjangoApp/about.html",
+        {
+            'title' : "About HelloDjangoApp",
+            'content' : "Example app page for Django."
         }
     )
 
